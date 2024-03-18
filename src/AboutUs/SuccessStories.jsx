@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
+import image2 from '../assets/image2.jpg'
 const cards = [
-    { name: 'Card 1', bio: 'This is the bio for card 1.' },
-    { name: 'Card 2', bio: 'This is the bio for card 2.' },
-    { name: 'Card 3', bio: 'This is the bio for card 3.' },
-    { name: 'Card 4', bio: 'This is the bio for card 4.' },
-    { name: 'Card 5', bio: 'This is the bio for card 5.' },
+    { name: 'Card 1', bio: 'This is the bio for card 1.',img:image2 },
+    { name: 'Card 2', bio: 'This is the bio for card 2.',img:image2 },
+    { name: 'Card 3', bio: 'This is the bio for card 3.',img:image2},
+    { name: 'Card 4', bio: 'This is the bio for card 4.',img:image2 },
+    { name: 'Card 5', bio: 'This is the bio for card 5.',img:image2},
 ];
 
 const SuccessStories = () => {
@@ -41,32 +41,31 @@ const SuccessStories = () => {
                 {cards.map((card, index) => (
                     <div
                         key={index}
-                        className="w-1/3 flex-shrink-0 flex items-center justify-center p-4 bg-gray-100 rounded-md shadow-md"
+                        className="w-96 h-96  flex flex-col-reverse items-center justify-center p-4 bg-gray-100 rounded-md shadow-md mx-1"
                     >
                         <h3>{card.name}</h3>
                         <p>{card.bio}</p>
+                        <img className=''src={card.img} alt="" />
                     </div>
                 ))}
             </div>
-            <div className="absolute inset-y-0 flex items-center">
+            <div className=" flex items-center justify-center pb-4">
                 <button
                     type="button"
-                    className="border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full"
-                    
+                    className="border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full mr-2"
                     onClick={handlePrev}
                     disabled={currentIndex === 0}
                 >
-                    
-                    <i className="fas fa-chevron-left"></i>
+                    <img className='w-4 h-4 transform rotate-180' src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-arrow-24.png" alt="" />
                 </button>
 
                 <button
                     type="button"
-                    className="border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full"
+                    className="border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full ml-2"
                     onClick={handleNext}
                     disabled={currentIndex === cards.length - 3}
                 >
-                    <img className='size-3' src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-arrow-24.png" alt="" />
+                    <img className='w-4 h-4' src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-arrow-24.png" alt="" />
                 </button>
             </div>
         </div>
