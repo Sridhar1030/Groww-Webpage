@@ -26,7 +26,6 @@ function AboutUs() {
                 To the parents, we have a responsibility to nurture ethical and responsible leadership in the children.
             </p>
         </section>
-        <OurTeam/>
         </>
     )
 }
