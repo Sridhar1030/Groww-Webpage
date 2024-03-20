@@ -24,28 +24,28 @@ const SuccessStories = () => {
     const handlePrev = () => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        const prevIndex = currentIndex === 0 ? cards.length - 1 : currentIndex - 1;
+        const prevIndex = currentIndex === 0 ? cards.length * 2 - 2 : currentIndex - 1;
         setCurrentIndex(prevIndex);
         setTimeout(() => setIsTransitioning(false), 300); // Adjust transition duration as needed
     };
 
     const cardStyle = {
         transform: `translateX(calc(-${currentIndex * (100 / (cards.length + 1))}%))`,
-        transition: currentIndex === cards.length*2+1 ? 'none' : 'transform 0.3s ease-in-out', // Apply transition only if not transitioning from last to first
+        transition: currentIndex === cards.length * 2 + 1 ? 'none' : 'transform 0.3s ease-in-out', // Apply transition only if not transitioning from last to first
         transition: currentIndex === 0 ? 'none' : 'transform 0.3s ease-in-out', // Apply transition only if not transitioning from last to first
         width: `${(cards.length + 1) * (100 / 3)}%`, // Adjust the width of the container
     };
 
-    return (    
+    return (
         <div className="relative w-full overflow-hidden">
             <div className='flex'>
                 <div className="flex" style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-96 h-96  flex flex-col-reverse items-center justify-center p-4 bg-gray-100 rounded-md shadow-md mx-1"
+                            className="w-96 h-96  flex flex-col-reverse items-center justify-center p-4  bg-gray-100 rounded-md shadow-md mx-1"
                         >
-                            <h3>{card.name}</h3>
+                            <h3 className=''>{card.name}</h3>
                             <p>{card.bio}</p>
                             <img className='' src={card.img} alt="" />
                         </div>
@@ -68,9 +68,9 @@ const SuccessStories = () => {
             <div className=" flex items-center justify-center pb-4">
                 <button
                     type="button"
-                    className="border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full mr-2"
+                    className={`border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full mr-2 ${isTransitioning || currentIndex === 0 ? 'cursor-not-allowed' : ''}`}
                     onClick={handlePrev}
-                    disabled={isTransitioning}
+                    disabled={isTransitioning || currentIndex === 0} // Disable if transitioning or at the first index
                 >
                     <img className='w-4 h-4 transform rotate-180' src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-arrow-24.png" alt="" />
                 </button>
