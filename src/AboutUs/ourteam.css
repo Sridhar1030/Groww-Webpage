@@ -1,0 +1,28 @@
+.slider {
+    animation: scroll 15s linear infinite;
+    overflow: hidden;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .slider-contain:hover{
+    animation-play-state: paused;
+  }
+  
+  .item {
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 2px;
+    border-bottom: solid;
+    
+    border-color: #b936ee;
+    height: 90px;
+  }
+  
