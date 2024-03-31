@@ -2,54 +2,39 @@ import React from 'react'
 const skills = [
     {
         id: 1,
-        name: 'HTML',
-        imgs: "https://picsum.photos/200/300",
+        name: 'Mr Sachin Yadav',
+        qualification: '(BE computer science)',
+        experience: ' Teaching Experience 7 years',
+        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
     },
     {
         id: 2,
-        name: 'CSS ' + '(Bootstrap, Tailwind CSS, Material UI)',
-        imgs: "https://picsum.photos/200/300",
+        name: 'Mr Akshesh Yadav',
+        qualification: '(M.B.B.S)',
+        experience: ' Teaching Experience 6 years',
+        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
     },
     {
-        id: 3,
-        name: 'JavaScript',
-        imgs: "https://picsum.photos/200/300",
+        id: 1,
+        name: 'Mr Shubham Jaiswar',
+        qualification: '(M.B.B.S)',
+        experience: ' Teaching Experience 7 years',
+        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
     },
     {
-        id: 4,
-        name: 'React JS',
-        imgs: "https://picsum.photos/200/300",
+        id: 1,
+        name: 'Mr Aakash Chaurasiya',
+        qualification: '(BE computer science)',
+        experience: ' Teaching Experience 7 years',
+        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
     },
     {
-        id: 5,
-        name: 'Node JS',
-        imgs: "https://picsum.photos/200/300",
-    },
-    {
-        id: 6,
-        name: 'MongoDB',
-        imgs: "https://picsum.photos/200/300",
-    },
-    {
-        id: 7,
-        name: 'Adobe Photoshop',
-        imgs: "https://picsum.photos/200/300",
-    },
-    {
-        id: 8,
-        name: 'Adobe Illustrator',
-        imgs: "https://picsum.photos/200/300",
-    },
-    {
-        id: 9,
-        name: 'Adobe XD',
-        imgs: "https://picsum.photos/200/300",
-    },
-    {
-        id: 10,
-        name: 'Figma',
-        imgs: "https://picsum.photos/200/300",
-    },
+        id: 1,
+        name: 'Mr Ankit Vishwakarma',
+        qualification: '(BE computer science)',
+        experience: ' Teaching Experience 6 years',
+        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
+    },    
 ]
 
 const Outteam = () => {
@@ -60,8 +45,11 @@ const Outteam = () => {
                     {skills.map((skills, id) => {
                         return (
                             <div className=" items-center text-center rounded-3xl my-3 mx-3 hover:text-accent border-2 bg-slate-300 flex flex-col">
-                                <img src={skills.imgs} alt="" className='w-48 h-20 item rounded-full' />
-                                <h5 className=' w-40 mx-4'>{skills.name}</h5>
+                                <img src={skills.imgs} alt="" className='h-32 w-32 flex flex-col  rounded-full' />
+                                <h5 className=' w-40 mx-4 font-semibold'>{skills.name}</h5>
+                                <h5 className=' w-40 mx-4'>{skills.qualification}</h5>
+                                <h5 className=' w-40 mx-4'>{skills.experience}</h5>
+
                             </div>
                         )
                     })}
@@ -70,8 +58,11 @@ const Outteam = () => {
                     {skills.map((skills, id) => {
                         return (
                             <div className=" items-center text-center rounded-3xl my-3 mx-3 hover:text-accent border-2 bg-slate-300 flex flex-col">
-                                <img src={skills.imgs} alt="" className='w-48 h-20 item rounded-full' />
-                                <h5 className=' w-40 mx-4'>{skills.name}</h5>
+                                <img src={skills.imgs} alt="" className='w-32 h-32 item rounded-full' />
+                                <h5 className=' w-40 mx-4 font-semibold'>{skills.name}</h5>
+                                <h5 className=' w-40 mx-4'>{skills.qualification}</h5>
+                                <h5 className=' w-40 mx-4'>{skills.experience}</h5>
+
                             </div>
                         )
                     })}
