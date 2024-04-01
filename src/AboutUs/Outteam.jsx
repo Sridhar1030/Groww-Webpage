@@ -1,41 +1,55 @@
-import React from 'react'
+import React from 'react';
+import sachinImg from "../assets/Images/sachin.png";
+import aksheshImg from "../assets/Images/Akshesh.png";
+import shubhamImg from "../assets/Images/Shubham.png";
+import aakashImg from "../assets/Images/Aakash.png";
+import ankitImg from "../assets/Images/Ankit.png";
+import abhishekImg from "../assets/Images/Abhishek.png";
+
 const skills = [
     {
         id: 1,
         name: 'Mr Sachin Yadav',
         qualification: '(BE computer science)',
-        experience: ' Teaching Experience 7 years',
-        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
+        experience: 'Teaching Experience 7 years',
+        imgs: sachinImg,
     },
     {
         id: 2,
         name: 'Mr Akshesh Yadav',
         qualification: '(M.B.B.S)',
-        experience: ' Teaching Experience 6 years',
-        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
+        experience: 'Teaching Experience 6 years',
+        imgs: aksheshImg,
     },
     {
-        id: 1,
+        id: 3,
         name: 'Mr Shubham Jaiswar',
         qualification: '(M.B.B.S)',
-        experience: ' Teaching Experience 7 years',
-        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
+        experience: 'Teaching Experience 7 years',
+        imgs: shubhamImg,
     },
     {
-        id: 1,
+        id: 4,
         name: 'Mr Aakash Chaurasiya',
         qualification: '(BE computer science)',
-        experience: ' Teaching Experience 7 years',
-        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
+        experience: 'Teaching Experience 7 years',
+        imgs: aakashImg,
     },
     {
-        id: 1,
+        id: 5,
         name: 'Mr Ankit Vishwakarma',
         qualification: '(BE computer science)',
-        experience: ' Teaching Experience 6 years',
-        imgs: "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
-    },    
-]
+        experience: 'Teaching Experience 6 years',
+        imgs: ankitImg,
+    },
+    {
+        id: 6,
+        name: 'Mr Abhishek Chaubey',
+        qualification: 'B.Sc. Bed(Mathematics) ',
+        experience: 'Teaching Experience 6 years',
+        imgs: abhishekImg,
+    },
+];
 
 const Outteam = () => {
     return (
@@ -45,7 +59,7 @@ const Outteam = () => {
                     {skills.map((skills, id) => {
                         return (
                             <div className=" items-center text-center rounded-3xl my-3 mx-3 hover:text-accent border-2 bg-slate-300 flex flex-col">
-                                <img src={skills.imgs} alt="" className='h-32 w-32 flex flex-col  rounded-full' />
+                                <img src={skills.imgs} alt="img" className='h-32 w-32 flex flex-col  rounded-full' />
                                 <h5 className=' w-40 mx-4 font-semibold'>{skills.name}</h5>
                                 <h5 className=' w-40 mx-4'>{skills.qualification}</h5>
                                 <h5 className=' w-40 mx-4'>{skills.experience}</h5>
