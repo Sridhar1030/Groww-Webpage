@@ -1,5 +1,6 @@
 import Outteam from "./Outteam";
 import SuccessStories from "./SuccessStories";
+import SuccessStories2 from "./SuccessStories2";
 
 function AboutUs() {
     return (
@@ -29,6 +30,7 @@ function AboutUs() {
                 </p>
                 <Outteam />
                 <SuccessStories />
+                <SuccessStories2/>
             </section>
         </>
     )
