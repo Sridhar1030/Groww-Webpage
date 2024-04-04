@@ -58,7 +58,7 @@ const Outteam = () => {
                 <div className=" slider flex overflow-visible">
                     {skills.map((skills, id) => {
                         return (
-                            <div className=" items-center text-center rounded-3xl my-3 mx-3 hover:text-accent bg-slate-300 flex flex-col">
+                            <div className="transistion duration-300 transform hover:scale-105 items-center text-center rounded-3xl my-3 mx-3 hover:text-accent bg-slate-300 flex flex-col">
                                 <img src={skills.imgs} alt="img" className='h-32 w-32 flex flex-col  rounded-full' />
                                 <h5 className=' w-40 mx-4 font-semibold'>{skills.name}</h5>
                                 <h5 className=' w-40 mx-4'>{skills.qualification}</h5>
@@ -71,8 +71,8 @@ const Outteam = () => {
                 <div className=" slider flex overflow-visible">
                     {skills.map((skills, id) => {
                         return (
-                            <div className=" items-center text-center rounded-3xl my-3 mx-3 hover:text-accent bg-slate-300 flex flex-col">
-                                <img src={skills.imgs} alt="" className='w-32 h-32 item rounded-full' />
+                            <div className="transistion duration-300 transform hover:scale-105 items-center text-center rounded-3xl my-3 mx-3 hover:text-accent bg-slate-300 flex flex-col">
+                                <img src={skills.imgs} alt="img" className='h-32 w-32 flex flex-col  rounded-full' />
                                 <h5 className=' w-40 mx-4 font-semibold'>{skills.name}</h5>
                                 <h5 className=' w-40 mx-4'>{skills.qualification}</h5>
                                 <h5 className=' w-40 mx-4'>{skills.experience}</h5>

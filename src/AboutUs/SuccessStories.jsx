@@ -39,31 +39,28 @@ const SuccessStories = () => {
     return (
         <div className="relative w-full overflow-hidden">
             <div className='flex'>
-                <div className="flex   font-semibold " style={cardStyle}>
+                <div className="flex font-semibold" style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-72 md:w-96 h-96  flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
-                            >
-                            <img className='w-72' src={card.img} alt="" />
-                            <h3 className='w-44 md:w-72'>{card.name}</h3>
-                            
-
-                            <p className=" line-clamp-5 w-56 md:w-72">{card.bio}</p>   
+                            className="w-72 md:w-96 h-96 flex flex-col items-center justify-start text-center p-4 bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl transition duration-300 transform hover:scale-105"
+                        >
+                            <img className="w-72" src={card.img} alt="" />
+                            <h3 className="w-44 md:w-72">{card.name}</h3>
+                            <p className="line-clamp-5 w-56 md:w-72">{card.bio}</p>
                         </div>
                     ))}
                 </div>
-                <div className="flex   font-semibold " style={cardStyle}>
+
+                <div className="flex font-semibold" style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-72 md:w-96 h-96  flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
-                            >
-                            <img className='w-72' src={card.img} alt="" />
-                            <h3 className='w-44 md:w-72'>{card.name}</h3>
-                            
-
-                            <p className=" line-clamp-5 w-56 md:w-72">{card.bio}</p>   
+                            className="w-72 md:w-96 h-96 flex flex-col items-center justify-start text-center p-4 bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl transition duration-300 transform hover:scale-105"
+                        >
+                            <img className="w-72" src={card.img} alt="" />
+                            <h3 className="w-44 md:w-72">{card.name}</h3>
+                            <p className="line-clamp-5 w-56 md:w-72">{card.bio}</p>
                         </div>
                     ))}
                 </div>

@@ -58,7 +58,7 @@ const Outteam2 = () => {
                 <div className=" slider flex overflow-visible">
                     {skills.map((skills, id) => {
                         return (
-                            <div className='flex flex-col justify-center items-center'>
+                            <div className='transistion duration-300 transform hover:scale-105 flex flex-col justify-center items-center'>
                                 <img src={skills.imgs} alt="img" className='h-32 w-32 border-2 border-black flex flex-col z-50 rounded-full' />
                                 <div className=" items-center text-center  rounded-3xl -mt-10 h-44 pt-12 z-0 mx-3 hover:text-accent border-2 bg-slate-300 flex flex-col">
                                     <h5 className=' w-52 mx-4 text-lg font-bold'>{skills.name}</h5>
@@ -72,7 +72,7 @@ const Outteam2 = () => {
                 <div className=" slider flex overflow-visible">
                     {skills.map((skills, id) => {
                         return (
-                            <div className='flex flex-col justify-center items-center'>
+                            <div className='transistion duration-300 transform hover:scale-105 flex flex-col justify-center items-center'>
                                 <img src={skills.imgs} alt="img" className='h-32 w-32 border-2 border-black flex flex-col z-50 rounded-full' />
                                 <div className=" items-center text-center  rounded-3xl -mt-10 h-44 pt-12 z-0 mx-3 hover:text-accent border-2 bg-slate-300 flex flex-col">
                                     <h5 className=' w-52 mx-4 text-lg font-bold'>{skills.name}</h5>

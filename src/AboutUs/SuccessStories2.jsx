@@ -39,38 +39,35 @@ const SuccessStories2 = () => {
     return (
         <div className="relative w-full overflow-hidden">
             <div className='flex'>
-                <div className="flex h-[360px] items-center  font-semibold " style={cardStyle}>
+            <div className="flex h-[360px] items-center font-semibold" style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-72 md:w-80 h-80 flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
-                            >
-                            <div className='flex items-center gap-2 border-2 text-left'>
-                            <img className='w-32 h-32 rounded-full' src={card.img} alt="" />
-                            <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{card.name}</h3>
+                            className="w-72 md:w-80 h-80 flex flex-col items-center justify-start text-center p-4 bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl transition duration-300 transform hover:scale-105"
+                        >
+                            <div className='flex items-center gap-2  text-left'>
+                                <img className='w-32 h-32 rounded-full' src={card.img} alt="" />
+                                <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{card.name}</h3>
                             </div>
-                            
-
-                            <p className="line-clamp-5 w-44 md:w-72">{card.bio}</p>   
+                            <p className="line-clamp-5 w-44 md:w-72">{card.bio}</p>
                         </div>
                     ))}
                 </div>
-                <div className="flex h-[360px] items-center  font-semibold " style={cardStyle}>
+                <div className="flex h-[360px] items-center font-semibold" style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-72 md:w-80 h-80 flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
-                            >
-                            <div className='flex items-center gap-2 border-2 text-left'>
-                            <img className='w-32 h-32 rounded-full' src={card.img} alt="" />
-                            <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{card.name}</h3>
+                            className="w-72 md:w-80 h-80 flex flex-col items-center justify-start text-center p-4 bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl transition duration-300 transform hover:scale-105"
+                        >
+                            <div className='flex items-center gap-2  text-left'>
+                                <img className='w-32 h-32 rounded-full' src={card.img} alt="" />
+                                <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{card.name}</h3>
                             </div>
-                            
-
-                            <p className="line-clamp-5 w-44 md:w-72">{card.bio}</p>   
+                            <p className="line-clamp-5 w-44 md:w-72">{card.bio}</p>
                         </div>
                     ))}
                 </div>
+
             </div>
 
             <div className=" flex items-center justify-center pb-4">
