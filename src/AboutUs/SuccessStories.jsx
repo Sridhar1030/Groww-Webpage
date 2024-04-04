@@ -39,31 +39,31 @@ const SuccessStories = () => {
     return (
         <div className="relative w-full overflow-hidden">
             <div className='flex'>
-                <div className="flex  border-2 border-red-500 font-semibold " style={cardStyle}>
+                <div className="flex   font-semibold " style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-96 h-96  border border-red-500 flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
+                            className="w-72 md:w-96 h-96  flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
                             >
                             <img className='w-72' src={card.img} alt="" />
                             <h3 className='w-44 md:w-72'>{card.name}</h3>
                             
 
-                            <p className=" line-clamp-5 w-56">{card.bio}</p>   
+                            <p className=" line-clamp-5 w-56 md:w-72">{card.bio}</p>   
                         </div>
                     ))}
                 </div>
-                <div className="flex  border-2 border-red-500" style={cardStyle}>
+                <div className="flex   font-semibold " style={cardStyle}>
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="w-96 h-96  border border-red-500 flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 "
+                            className="w-72 md:w-96 h-96  flex flex-col items-center justify-start text-center p-4  bg-gray-100 rounded-md shadow-md mx-1 drop-shadow-xl"
                             >
                             <img className='w-72' src={card.img} alt="" />
                             <h3 className='w-44 md:w-72'>{card.name}</h3>
                             
 
-                            <p className=" line-clamp-5 w-56">{card.bio}</p>   
+                            <p className=" line-clamp-5 w-56 md:w-72">{card.bio}</p>   
                         </div>
                     ))}
                 </div>
@@ -72,7 +72,7 @@ const SuccessStories = () => {
             <div className=" flex items-center justify-center pb-4">
                 <button
                     type="button"
-                    className={`border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full mr-2 ${isTransitioning || currentIndex === 0 ? 'cursor-not-allowed' : ''}`}
+                    className={` p-2  focus:ring-offset-2 hover:bg-gray-200 rounded-full mr-2 ${isTransitioning || currentIndex === 0 ? 'cursor-not-allowed' : ''}`}
                     onClick={handlePrev}
                     disabled={isTransitioning || currentIndex === 0} // Disable if transitioning or at the first index
                 >
@@ -81,7 +81,7 @@ const SuccessStories = () => {
 
                 <button
                     type="button"
-                    className="border border-red-500 p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-gray-200 rounded-full ml-2"
+                    className=" p-2  focus:ring-offset-2 hover:bg-gray-200 rounded-full ml-2"
                     onClick={handleNext}
                     disabled={isTransitioning}
                 >
