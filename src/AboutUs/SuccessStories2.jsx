@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import image2 from '../assets/image2.jpg';
+import data from './Success.json'
 
-const cards = [
-    { name: 'Card 1', bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.', img: image2 },
-    { name: 'Card 2', bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.', img: image2 },
-    { name: 'Card 3', bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.', img: image2 },
-    { name: 'Card 4', bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.', img: image2 },
-    { name: 'Card 5', bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.', img: image2 },
-];
+
 
 const SuccessStories2 = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +11,7 @@ const SuccessStories2 = () => {
     const handleNext = () => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        const nextIndex = currentIndex === cards.length + 1 ? 0 : currentIndex + 1.2;
+        const nextIndex = currentIndex === data.length + 1 ? 0 : currentIndex + 1.2;
         setCurrentIndex(nextIndex);
         setTimeout(() => setIsTransitioning(false), 300); // Adjust transition duration as needed
     };
@@ -24,16 +19,16 @@ const SuccessStories2 = () => {
     const handlePrev = () => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        const prevIndex = currentIndex === 0 ? cards.length * 2 - 2 : currentIndex - 1.2;
+        const prevIndex = currentIndex === 0 ? data.length * 2 - 2 : currentIndex - 1.2;
         setCurrentIndex(prevIndex);
         setTimeout(() => setIsTransitioning(false), 300); // Adjust transition duration as needed
     };
 
     const cardStyle = {
-        transform: `translateX(calc(-${currentIndex * (100 / (cards.length + 1))}%))`,
-        transition: currentIndex === cards.length * 2 + 1 ? 'none' : 'transform 0.3s ease-in-out', // Apply transition only if not transitioning from last to first
+        transform: `translateX(calc(-${currentIndex * (100 / (data.length + 1))}%))`,
+        transition: currentIndex === data.length * 2 + 1 ? 'none' : 'transform 0.3s ease-in-out', // Apply transition only if not transitioning from last to first
         transition: currentIndex === 0 ? 'none' : 'transform 0.3s ease-in-out', // Apply transition only if not transitioning from last to first
-        width: `${(cards.length + 1) * (100 / 1)}%`, // Adjust the width of the container
+        width: `${(data.length + 1) * (100 / 1)}%`, // Adjust the width of the container
     };
 
     return (
@@ -63,16 +58,16 @@ const SuccessStories2 = () => {
             </div>
             <div className='flex'>
                 <div className="flex h-[360px] items-center font-semibold" style={cardStyle}>
-                    {cards.map((card, index) => (
+                    {data.map((data, index) => (
                         <div
                             key={index / 2}
                             className="w-72 md:w-80 h-80 flex flex-col items-center justify-start text-center p-4 bg-blue-950 text-white rounded-md shadow-md mx-1 drop-shadow-xl transition duration-300 transform hover:scale-105"
                         >
                             <div className='flex items-center gap-2 pl-6 text-left'>
-                                <img className='w-16 h-16 rounded-full' src={card.img} alt="" />
-                                <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{card.name}</h3>
+                                <img className='w-16 h-16 rounded-full border' src={data.img} alt="" />
+                                <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{data.name}</h3>
                             </div>
-                            <p className="line-clamp-8 mt-4 w-44 md:w-72 ">{card.bio}</p>
+                            <p className="line-clamp-8 mt-4 w-44 md:w-72 ">{data.bio}</p>
                         </div>
                     ))}
 
@@ -82,16 +77,16 @@ const SuccessStories2 = () => {
                 <div className='flex justify-center items-center align-middle overflow-visible'>
                 </div>
                 <div className="flex h-[360px] items-center font-semibold" style={cardStyle}>
-                    {cards.map((card, index) => (
+                    {data.map((data, index) => (
                         <div
                             key={index}
                             className="w-72 md:w-80 h-80 flex flex-col items-center justify-start text-center p-4 bg-blue-950 text-white rounded-md shadow-md mx-1 drop-shadow-xl transition duration-300 transform hover:scale-105"
                         >
                             <div className='flex items-center gap-2 pl-6 text-left'>
-                                <img className='w-16 h-16 rounded-full' src={card.img} alt="" />
-                                <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{card.name}</h3>
+                                <img className='w-16 h-16 rounded-full border' src={data.img} alt="" />
+                                <h3 className='w-44 md:w-72 text-xl line-clamp-2'>{data.name}</h3>
                             </div>
-                            <p className="line-clamp-8 mt-4 w-44 md:w-72  ">{card.bio}</p>
+                            <p className="line-clamp-8 mt-4 w-44 md:w-72  ">{data.bio}</p>
                         </div>
                     ))}
                 </div>

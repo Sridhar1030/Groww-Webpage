@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Card 1",
+        "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.",
+        "img": "/src/assets/image2.jpg"
+    },
+    {
+        "name": "Card 2",
+        "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.",
+        "img": "/src/assets/image2.jpg"
+    },
+    {
+        "name": "Card 3",
+        "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.",
+        "img": "/src/assets/image2.jpg"
+    },
+    {
+        "name": "Card 4",
+        "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.",
+        "img": "/src/assets/image2.jpg"
+    },
+    {
+        "name": "Card 5",
+        "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium itaque iste beatae. Exercitationem recusandae modi qui. Consequatur impedit, dolorum cumque iusto iure omnis enim sequi nesciunt esse nisi numquam eveniet.",
+        "img": "/src/assets/image2.jpg"
+    }
+]
