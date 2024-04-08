@@ -53,7 +53,7 @@ const skills = [
 
 const Outteam2 = () => {
     return (
-        <div className='rounded-lg flex justify-center'>
+        <div className='rounded-lg flex justify-center mt-10'>
             <div className="container rounded-3xl slider-contain flex overflow-hidden h-72" >
                 <div className=" slider flex overflow-visible">
                     {skills.map((skills, id) => {

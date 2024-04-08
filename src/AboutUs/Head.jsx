@@ -3,7 +3,7 @@ import img from '../assets/Images/sachin.png';
 
 const Head = () => {
     return (
-        <div className="text-gray-100 bg-gray-500 p-5">
+        <div className="text-gray-100 bg-gray-500 p-5 backdrop-filter backdrop-blur-sm bg-opacity-80 drop-shadow-xl rounded-2xl">
             <h1 className='font-semibold text-center text-4xl'>Know About
                 <span className="text-blue-950 ml-2">"Grow Educators"</span>
             </h1>

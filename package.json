@@ -20,7 +20,8 @@
     "slick-carousel": "^1.8.1",
     "swiper": "^11.0.7",
     "tw-elements": "^2.0.0",
-    "tw-elements-react": "^1.0.0-alpha2"
+    "tw-elements-react": "^1.0.0-alpha2",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
