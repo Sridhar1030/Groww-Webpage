@@ -35,6 +35,13 @@
         "imgs": "/src/assets/Images/ankit.png"
     },
     {
+        "id": 5,
+        "name": "Mr. Ankit Vishwakarma",
+        "qualification": "BE Computer Science",
+        "experience": "6 years",
+        "imgs": "/src/assets/Images/ankit.png"
+    },
+    {
         "id": 6,
         "name": "Mr. Abhishek Chaubey",
         "qualification": "B.Sc. Bed (Mathematics)",

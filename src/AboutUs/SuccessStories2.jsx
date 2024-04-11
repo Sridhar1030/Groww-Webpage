@@ -11,7 +11,9 @@ const SuccessStories2 = () => {
     const handleNext = () => {
         if (isTransitioning) return;
         setIsTransitioning(true);
-        const nextIndex = currentIndex === data.length + 1 ? 0 : currentIndex + 1.2;
+        console.log("currentIndex", currentIndex);
+        console.log("data.length", data.length);
+        const nextIndex = currentIndex >= data.length  ? 0 : currentIndex + 1.1;
         setCurrentIndex(nextIndex);
         setTimeout(() => setIsTransitioning(false), 300); // Adjust transition duration as needed
     };
